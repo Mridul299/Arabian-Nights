@@ -1,4 +1,4 @@
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe,handlecookbutton  }) => {
   const {
     recipe_name,
     recipe_image,
@@ -9,7 +9,7 @@ const Recipe = ({ recipe }) => {
   } = recipe;
   return (
     <div>
-      <div className="card bg-base-100 shadow-sm">
+      <div className="card bg-base-100 border-2 border-gray-200">
         <figure className=" p-3.5">
           <img
             className="w-full lg:h-72 md:h-48  h-56 my-5 rounded-3xl"
@@ -35,7 +35,7 @@ const Recipe = ({ recipe }) => {
             <span> 🔥{calories}</span>
           </div>
           <div className="card-actions justify-start mt-3">
-            <button className="btn btn-primary">Want to Cook</button>
+            <button className="btn btn-success text-black rounded-full font-semibold bg-[#0BE58A]" onClick={()=>handlecookbutton (recipe)}>Want to Cook</button>
           </div>
         </div>
       </div>
